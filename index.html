@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="header" class="header">
+        <nav class="navbar">
+            <h2 class="logo">Traveling Website</h2>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="menu nav-menu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#signin" onclick="toggleAuth('signin')">Sign In</a></li>
+                <li><a href="#signup" onclick="toggleAuth('signup')">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1 class="typedText">Find your next stay
+            <br> Search deals on hotels, homes, and much more...</h1>
+        <!--<button class="btn">About</button>-->
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-heading">
+            <h1 class="my-heading text-center">Trending destinations</h1>
+        </div>
+        <div class="portfolio-content">
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="new dehi.jpg" alt="New Delhi Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">New Delhi</h3>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="benagluru.jpg" alt="Bengluru Image">
+                        </div>
+                    
+                        <h3 class="greet-heading blue-text">Benagluru </h3>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="mumbai.jpg" alt="Mumbai Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">Mumbai</h3>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card">
+                        <div class="image">
+                            <img src="hyderbad.jpg" alt="Hyderabad Image">
+                        </div>
+                        <h3 class="greet-heading blue-text">Hyderabad</h3>
+                        
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+   <!-- About Section -->
+   <section id="about" class="about">
+    <div class="about-text">
+        <h1 class="my-heading">About </h1>
+        <p class="lead-para">
+            We believe that travel is more than just moving from one place to another it's about experiences, stories, and unforgettable memories. 
+        </p>
+        </p>
+        <p>
+            <br>
+            "Traveling is not just about places; 
+            it’s about flavors!  connects you with the best food destinations, 
+            culinary tours, and local delicacies. Experience the rich taste of different cultures and make every meal a story to remember!"            
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="paris.jfif" alt="About Image">
+    </div>
+</section>
+<!-- Contact me section -->
+<section class="contact" id="contact">
+    <div class="contact-heading">
+        <h1 class="my-heading text-center">Contact Me</h1>
+    </div>
+    <div class="contact-content">
+        <div class="contact-form-container">
+            <h1 class="greet-heading">Get In Touch</h1>
+            <form class="contact-form">
+                <input class="form-controls" type="text" placeholder="Your Name">
+                <input class="form-controls" type="text" placeholder="Your Email">
+                <input class="form-controls" type="text" placeholder="Your Phone">
+                <textarea class="form-controls" placeholder="Write your message" name="message" id="" cols="30" rows="10"></textarea>
+                <input class="form-btn btn common-btn" type="submit" value="Send Message">
+            </form>
+        </div>
+        <div class="contact-details">
+            <h1 class="greet-heading">My Contact Details</h1>
+            <div class="details">
+                <h5 class="contact-heading">EMAIL</h5>
+                <p class="contact-text">example@gmail.com</p>
+            </div>
+            <div class="details">
+                <h5 class="contact-heading">PHONE</h5>
+                <p class="contact-text">+91 0123456789</p>
+            </div>
+            <div class="details">
+                <h5 class="contact-heading">FAX</h5>
+                <p class="contact-text">+91 0123456789</p>
+            </div>
+            <div class="details">
+                <h5 class="contact-heading">ADDRESS</h5>
+                <p class="contact-text">India, Karnataka</p>
+                <p>4th Floor, 8 Lower Maruthi Nagar, M1 50F</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <!-- Sign In & Sign Up Forms -->
+    <div class="auth-container" id="auth-container">
+        <!-- Sign In Form -->
+        <div class="auth-box" id="signin-form">
+            <h2>Sign In</h2>
+            <form id="signinForm">
+                <label for="signin-email">Email:</label>
+                <input type="email" id="signin-email" required>
+
+                <label for="signin-password">Password:</label>
+                <input type="password" id="signin-password" required>
+
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p id="signin-error" class="error"></p>
+            <p>Don't have an account? <a href="#" onclick="toggleAuth('signup')">Sign Up</a></p>
+            <button class="close-btn" onclick="closeAuth()">Close</button>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="auth-box" id="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="signup-name">Full Name:</label>
+                <input type="text" id="signup-name" required>
+
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <p id="signup-error" class="error"></p>
+            <p>Already have an account? <a href="#" onclick="toggleAuth('signin')">Sign In</a></p>
+            <button class="close-btn" onclick="closeAuth()">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Sign In & Sign Up -->
+    <script>
+        function toggleAuth(formType) {
+            document.getElementById('auth-container').style.display = 'flex';
+            document.getElementById('signin-form').style.display = formType === 'signin' ? 'block' : 'none';
+            document.getElementById('signup-form').style.display = formType === 'signup' ? 'block' : 'none';
+        }
+
+        function closeAuth() {
+            document.getElementById('auth-container').style.display = 'none';
+        }
+
+        // Store Sign Up Data in Local Storage
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let name = document.getElementById('signup-name').value;
+            let email = document.getElementById('signup-email').value;
+            let password = document.getElementById('signup-password').value;
+
+            if (localStorage.getItem(email)) {
+                document.getElementById('signup-error').textContent = "Email already exists!";
+                return;
+            }
+
+            localStorage.setItem(email, JSON.stringify({ name, password }));
+            alert("Sign Up successful! You can now Sign In.");
+            closeAuth();
+        });
+
+        // Check Sign In Data
+        document.getElementById('signinForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let email = document.getElementById('signin-email').value;
+            let password = document.getElementById('signin-password').value;
+
+            let user = localStorage.getItem(email);
+            if (!user) {
+                document.getElementById('signin-error').textContent = "Email not found. Please Sign Up first.";
+                return;
+            }
+
+            let userData = JSON.parse(user);
+            if (userData.password !== password) {
+                document.getElementById('signin-error').textContent = "Incorrect password.";
+                return;
+            }
+
+            alert("Sign In successful!");
+            closeAuth();
+        });
+    </script>
+
+</body>
+</html>

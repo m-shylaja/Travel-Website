@@ -1,0 +1,285 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #74D7BB, #53C8B6, #35A99C);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 35px;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    font-size: 1.1rem;
+}
+
+.menu a:hover {
+    border-bottom: 3px solid white;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    background: url('paris.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    
+    font-size: 3.5rem;
+    max-width: 800px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero .btn {
+    align-items: center;
+    padding: 14px 30px;
+    background-color: white;
+    color: #35A99C;
+    border: 3px solid #35A99C;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.hero .btn:hover {
+    background-color: #35A99C;
+    color: white;
+    transform: scale(1.08);
+    
+}
+
+
+
+/* Services section styles */
+.services {
+    margin: 5rem 0;
+    padding: 0 5rem;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.port-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C);
+    padding: 2rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.port-card:hover {
+    transform: scale(1.05);
+}
+
+.contact {
+    padding: 0 5rem;
+}
+
+.contact-content {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-between;
+}
+
+.contact-form-container {
+    width: 50%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-controls {
+    width: 80%;
+    padding: 10px 0;
+    margin: 1.67rem 0;
+}
+
+.contact-form .form-btn {
+    width: 83%;
+}
+
+.contact-details {
+    width: 50%;
+}
+
+/* About section styles */
+section {
+    padding: 60px 20px; /* Add padding for each section */
+    margin-top: 20px; /* Optional: margin to space out sections */
+  }
+  
+.about {
+    
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(45deg, #363D73, #2c97b5);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about .about-text {
+    
+    width: 450px;
+    color: #fff;
+    padding: 5rem 1rem 5rem 5rem;
+}
+
+.about .about-image img {
+    height: 700px;
+    width: 700px;
+    padding: 5rem 5rem 5rem 1rem;
+}
+
+/* Authentication Modal */
+.auth-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.auth-box {
+    display: none;
+}
+
+.auth-box h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.auth-box input {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.auth-box .btn {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-box .btn:hover {
+    background: #0056b3;
+}
+
+.auth-box p {
+    margin-top: 10px;
+}
+
+.auth-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    margin-top: 10px;
+    padding: 8px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
